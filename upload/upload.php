@@ -28,6 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     // Print EXIF information
                     $exif = exif_read_data($target_file);
+                    echo $exif;
                     if ($exif && isset($exif['COMPUTED']) && isset($exif['COMPUTED']['Html'])) {
                         echo "EXIF Information:<br>";
                         echo $exif['COMPUTED']['Html'];
